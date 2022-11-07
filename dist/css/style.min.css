@@ -1393,7 +1393,7 @@ section {
 .footer {
   background-color: var(--black);
   color: #fff;
-  padding: 80px 0 60px;
+  padding: 80px 0 0;
 }
 @media (max-width: 600px) {
   .footer {
@@ -1458,4 +1458,8 @@ section {
     height: 100vw;
     max-width: 100%;
   }
+}
+.footer__copy {
+  text-align: center;
+  padding: 50px 0;
 }
