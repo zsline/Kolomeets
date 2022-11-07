@@ -1,0 +1,85 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?go4k9a');
+  src:  url('fonts/icomoon.eot?go4k9a#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?go4k9a') format('truetype'),
+    url('fonts/icomoon.woff?go4k9a') format('woff'),
+    url('fonts/icomoon.svg?go4k9a#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  
+  /* Enable Ligatures ================ */
+  letter-spacing: 0;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  font-feature-settings: "liga";
+  -webkit-font-variant-ligatures: discretionary-ligatures;
+  font-variant-ligatures: discretionary-ligatures;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-user:before {
+  content: "\e903";
+}
+.icon-app-menu:before {
+  content: "\e904";
+}
+.icon-cart:before {
+  content: "\e905";
+}
+.icon-close:before {
+  content: "\e906";
+}
+.icon-delete:before {
+  content: "\e907";
+}
+.icon-filter:before {
+  content: "\e908";
+}
+.icon-heart:before {
+  content: "\e909";
+}
+.icon-heart-fill:before {
+  content: "\e90a";
+}
+.icon-mail:before {
+  content: "\e90c";
+}
+.icon-menu:before {
+  content: "\e90d";
+}
+.icon-next:before {
+  content: "\e90e";
+}
+.icon-prev:before {
+  content: "\e910";
+}
+.icon-star:before {
+  content: "\e911";
+}
+.icon-phone:before {
+  content: "\e900";
+}
+.icon-phone_iphone:before {
+  content: "\e901";
+}
+.icon-location:before {
+  content: "\e902";
+}

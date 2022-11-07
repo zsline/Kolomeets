@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('html/head.html',{
+"title":"Каталог"
+})
+
+<body>
+    @@include('html/header.html',{})
+    <main>
+        <section class="catalog">
+            <div class="container">
+                <h4 class="catalog__title">Каталог</h4>
+                <div class="catalog__crumbs crumbs">
+                    <nav class="crumbs__nav">
+                        <ul class="crumbs__nav-list">
+                            <li class="crumbs__nav-item">
+                                <a href="/" class="crumbs__nav-link">
+                                    Главная
+                                </a>
+                            </li>&nbsp/&nbsp
+                            <li class="crumbs__nav-item">
+                                <a class="crumbs__nav-link">
+                                    Каталог
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="catalog__categorys category">
+                    <ul class="category__list">
+                        <li class="category__item">
+                            <a href="#" class="category__link">
+                                <div class="category__img">
+                                    <img src="@img/catalog-1.jpg" alt="">
+                                </div>
+                                <div class="category__title">
+                                    <h3>Птица</h3>
+                                </div>
+                                <div class="category__current">
+                                    18 товаров
+                                </div>
+                            </a>
+                        </li>
+                        <li class="category__item">
+                            <a href="#" class="category__link">
+                                <div class="category__img">
+                                    <img src="@img/catalog-2.jpg" alt="">
+                                </div>
+                                <div class="category__title">
+                                    <h3>Свиньи</h3>
+                                </div>
+                                <div class="category__current">
+                                    18 товаров
+                                </div>
+                            </a>
+                        </li>
+                        <li class="category__item">
+                            <a href="#" class="category__link">
+                                <div class="category__img">
+                                    <img src="@img/catalog-3.jpg" alt="">
+                                </div>
+                                <div class="category__title">
+                                    <h3>КРС</h3>
+                                </div>
+                                <div class="category__current">
+                                    18 товаров
+                                </div>
+                            </a>
+                        </li>
+                        <li class="category__item">
+                            <a href="#" class="category__link">
+                                <div class="category__img">
+                                    <img src="@img/catalog-4.jpg" alt="">
+                                </div>
+                                <div class="category__title">
+                                    <h3>Кроли</h3>
+                                </div>
+                                <div class="category__current">
+                                    18 товаров
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="products">
+            <div class="container">
+                <div class="products__inner">
+                    <div class="products__sidebar sidebar">
+                        <div class="sidebar__catalog">
+                            <div class="sidebar__catalog-title">
+                                <h5><span class="icon-app-menu"></span>Каталог</h5><span class="title-arrow icon-next"></span>
+                            </div>
+                            <ul class="sidebar__catalog-nav">
+                                <li class="sidebar__catalog-item">
+                                    <a href="#">Птица<span class="title-arrow icon-next"></span></a>
+                                </li>
+                                <li class="sidebar__catalog-item">
+                                    <a href="#">Свиньи<span class="title-arrow icon-next"></span></a>
+                                </li>
+                                <li class="sidebar__catalog-item">
+                                    <a href="#">КРС<span class="title-arrow icon-next"></span></a>
+                                </li>
+                                <li class="sidebar__catalog-item">
+                                    <a href="#">Кроли<span class="title-arrow icon-next"></span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sidebar__filter">
+                            <div class="sidebar__catalog-title">
+                                <h5><span class="icon-filter"></span>Фильтр</h5><span class="title-arrow icon-next"></span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="products__wrapper">
+                        @@include('html/cards/popular-min.html',{})
+                        @@include('html/cards/actions-min.html',{})
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    @@include('html/footer.html',{})
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>

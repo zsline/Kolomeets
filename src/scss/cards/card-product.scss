@@ -1,0 +1,66 @@
+.card-product {
+    position: relative;
+    max-width: 290px;
+    min-height: 495px;
+    padding: 16px;
+    border-radius: 40px;
+    box-shadow: (0px 2px 7px rgba(0, 0, 0, 0.25));
+    overflow: hidden;
+    transition: all 0.3s;
+    &:hover{
+        box-shadow: (2px 3px 17px rgba(0, 0, 0, 0.15));
+        transform: scale(1.02);
+    }
+    &:hover .card-product__modal{
+    bottom: 50%;
+
+    }
+
+    &__img {
+        width: 100%;
+        max-height: 282px;
+        border-radius: 25px;
+        margin: 0 auto 20px;
+
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 20px;
+        margin-bottom: 8px;
+    }
+
+    &__are {
+        color: var(--green);
+        margin-bottom: 8px;
+    }
+
+    &__pricebox {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__oldprice {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        text-decoration-line: line-through;
+        margin-bottom: 5px;
+    }
+
+    &__newprice {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        color: var(--trinidad);
+    }
+    &__cart{
+        font-size: 40px;
+        color: var(--trinidad);
+        cursor: pointer;
+    }
+}
