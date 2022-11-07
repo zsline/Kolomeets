@@ -7,8 +7,10 @@
     }
     &__categorys ul{
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: space-around;
         align-items: start;
+        gap: 20px;
     }
 }
 
@@ -20,7 +22,7 @@
             justify-content: space-between;
             align-items: center;
             cursor: pointer;
-            padding: 15px 20px 15px 0;
+            padding: 15px 10px 15px 0;
             border-bottom: 1px solid var(--grey);
             h5{
                 span{
@@ -30,16 +32,45 @@
         }
         &-item{
             position: relative;
-            padding: 10px 20px 10px 30px;
+            padding: 10px 10px 10px 10px;
             border: 1px solid var(--grey);
             span{
                 position: absolute;
-                right: 20px;
+                right: 10px;
                 top: 50%;
                 transform: translateY(-50%);
                 font-size: 12px;
             }
+            legend{
+                margin-bottom: 10px;
+                width: 100%;
+                position: relative;
+                span{
+                    position: absolute;
+                    right: 0;
+                    transform: rotate(-90deg);
+                }
+            }
+            label{
+                position: relative;
+                display: block;
+                padding-left: 36px;
+                margin-bottom: 15px;
+            }
+            input{
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                opacity: 0;
+            }
         }
+    }
+    @media(max-width: 820px){
+        position: absolute;
+        display: none;
     }
 }
 

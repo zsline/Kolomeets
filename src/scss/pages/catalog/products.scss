@@ -3,6 +3,9 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 30px;
+        @media(max-width: 820px){
+            display: block;
+        }
     }
     &__wrapper{
         grid-column: span 3;

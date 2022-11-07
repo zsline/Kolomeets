@@ -33,8 +33,11 @@ margin: 0;
 
  }
  input{
-    display: inline-block;
-    width: 100%;
     border: none;
     box-sizing: border-box;
+ }
+ fieldset{
+    border: none;
+    margin: 0;
+    padding: 0;
  }
