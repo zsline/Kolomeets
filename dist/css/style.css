@@ -1386,7 +1386,22 @@ section {
   align-items: start;
   gap: 20px;
 }
+@media (max-width: 820px) {
+  .catalog__categorys {
+    display: none;
+  }
+}
 
+.sidebar {
+  user-select: none;
+}
+.sidebar__item {
+  cursor: pointer;
+}
+.sidebar__catalog {
+  position: sticky;
+  top: 20px;
+}
 .sidebar__catalog-title {
   display: flex;
   justify-content: space-between;
@@ -1398,31 +1413,47 @@ section {
 .sidebar__catalog-title h5 span {
   margin-right: 10px;
 }
+.sidebar__catalog-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 15px 10px 15px 0;
+  border-bottom: 1px solid var(--grey);
+}
+.sidebar__catalog-filter h5 span {
+  margin-right: 10px;
+}
 .sidebar__catalog-item {
   position: relative;
   padding: 10px 10px 10px 10px;
   border: 1px solid var(--grey);
+  cursor: pointer;
 }
 .sidebar__catalog-item span {
   position: absolute;
-  right: 10px;
+  right: 0px;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) rotate(90deg);
   font-size: 12px;
+  transition: all 0.3s;
 }
 .sidebar__catalog-item legend {
   margin-bottom: 10px;
   width: 100%;
   position: relative;
+  cursor: pointer;
 }
 .sidebar__catalog-item legend span {
   position: absolute;
   right: 0;
-  transform: rotate(-90deg);
+  top: 50%;
+  transform: translateY(-50%);
+  transform: rotate(90deg);
+  transition: all 0.3s;
 }
 .sidebar__catalog-item label {
   position: relative;
-  display: block;
   padding-left: 36px;
   margin-bottom: 15px;
 }
@@ -1435,15 +1466,51 @@ section {
   height: 1px;
   opacity: 0;
 }
-@media (max-width: 820px) {
-  .sidebar {
-    position: absolute;
-    display: none;
-  }
+.sidebar__catalog-item a {
+  position: relative;
+  padding: 10px 0px 10px 10px;
+}
+.sidebar__catalog-item a span {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  font-size: 12px;
+}
+.sidebar__catalog-nav {
+  display: none;
+}
+.sidebar__catalog .active {
+  display: block;
+}
+.sidebar__catalog-box {
+  padding: 10px;
+  display: none;
+}
+.sidebar__filter-wrapper {
+  display: none;
 }
 
 .title-arrow {
-  transform: rotate(-90deg);
+  transform: rotate(90deg);
+  transition: all 0.3s;
+}
+
+.filter-arrow {
+  transform: rotate(90deg);
+  transition: all 0.3s;
+}
+
+.sidebar__title .rotate-active {
+  transform: translateY(-5px) rotate(-90deg);
+}
+
+.sidebar__catalog-title .rotate-active {
+  transform: translateY(-5px) rotate(-90deg);
+}
+
+.filter-label {
+  display: block;
 }
 
 .products__inner {

@@ -1,63 +1,107 @@
-.catalog{
-    &__title{
+.catalog {
+    &__title {
         margin-bottom: 15px;
     }
-    &__crumbs{
+
+    &__crumbs {
         margin-bottom: 80px;
     }
-    &__categorys ul{
+
+    &__categorys ul {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: start;
         gap: 20px;
     }
+    &__categorys{
+        @media(max-width: 820px) {
+            // position: absolute;
+            display: none;
+        }
+    }
 }
 
 
-.sidebar{
-    &__catalog{
-        &-title{
+.sidebar {
+    user-select: none;
+    &__item{
+        cursor: pointer;
+    }
+    &__catalog {
+        position: sticky;
+        top: 20px;
+
+        &-title {
             display: flex;
             justify-content: space-between;
             align-items: center;
             cursor: pointer;
             padding: 15px 10px 15px 0;
             border-bottom: 1px solid var(--grey);
-            h5{
-                span{
+
+            h5 {
+                span {
                     margin-right: 10px;
                 }
             }
         }
-        &-item{
+
+        &-filter {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            padding: 15px 10px 15px 0;
+            border-bottom: 1px solid var(--grey);
+
+            h5 {
+                span {
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        &-item {
             position: relative;
+            // display: inline;
             padding: 10px 10px 10px 10px;
             border: 1px solid var(--grey);
-            span{
+            cursor: pointer;
+
+            span {
                 position: absolute;
-                right: 10px;
+                right: 0px;
                 top: 50%;
-                transform: translateY(-50%);
+                transform: translateY(-50%) rotate(90deg);
                 font-size: 12px;
+                transition: all 0.3s;
             }
-            legend{
+
+            legend {
                 margin-bottom: 10px;
                 width: 100%;
                 position: relative;
-                span{
+                cursor: pointer;
+
+                span {
                     position: absolute;
                     right: 0;
-                    transform: rotate(-90deg);
+                    top: 50%;
+                    transform: translateY(-50%);
+                    transform: rotate(90deg);
+                    transition: all 0.3s;
                 }
             }
-            label{
+
+
+            label {
                 position: relative;
-                display: block;
                 padding-left: 36px;
                 margin-bottom: 15px;
             }
-            input{
+
+            input {
                 -webkit-appearance: none;
                 -moz-appearance: none;
                 appearance: none;
@@ -67,13 +111,66 @@
                 opacity: 0;
             }
         }
+        
+        &-item a {
+            position: relative;
+            padding: 10px 0px 10px 10px;
+
+            span {
+                position: absolute;
+                right: 0px;
+                top: 50%;
+                transform: translateY(-50%) rotate(90deg);
+                font-size: 12px;
+            }
+        }
+
+        &-nav {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+        &-box {
+            padding: 10px;
+            display: none;
+        }
+
     }
-    @media(max-width: 820px){
-        position: absolute;
-        display: none;
+
+    @media(max-width: 820px) {
+        // position: absolute;
+        // display: none;
+    }
+
+
+    &__filter {
+        &-wrapper {
+            display: none;
+        }
     }
 }
 
-.title-arrow{
-    transform: rotate(-90deg);
+.title-arrow {
+    transform: rotate(90deg);
+    transition: all 0.3s;
+}
+
+.filter-arrow {
+    transform: rotate(90deg);
+    transition: all 0.3s;
+}
+
+.sidebar__title .rotate-active {
+    transform:translateY(-5px) rotate(-90deg);
+
+}
+.sidebar__catalog-title .rotate-active{
+    transform:translateY(-5px) rotate(-90deg);
+}
+
+.filter-label {
+    display: block;
 }
