@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('html/head.html',{
+"title":"Каталог"
+})
+
+<body>
+    @@include('html/header.html',{})
+    <main>
+
+        <section class="product">
+            <div class="container">
+                <h4 class="catalog__title">Корма для птицы</h4>
+                <div class="catalog__crumbs crumbs">
+                    <nav class="crumbs__nav">
+                        <ul class="crumbs__nav-list">
+                            <li class="crumbs__nav-item">
+                                <a href="/" class="crumbs__nav-link">
+                                    Главная
+                                </a>
+                            </li>&nbsp/&nbsp
+                            <li class="crumbs__nav-item">
+                                <a href="catalog.html" class="crumbs__nav-link">
+                                    Каталог
+                                </a>
+                            </li>&nbsp/&nbsp
+                            <li class="crumbs__nav-item">
+                                <a href="catalog.html" class="crumbs__nav-link">
+                                    Птица (18)
+                                </a>
+                            </li>&nbsp/&nbsp
+                            <li class="crumbs__nav-item">
+                                <a href="catalog.html" class="crumbs__nav-link">
+                                    Продуктивный период (2)
+                                </a>
+                            </li>&nbsp/&nbsp
+                            <li class="crumbs__nav-item">
+                                <a class="crumbs__nav-link">
+                                    Корма для птицы
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="product__wrapper">
+                    <div class="product__inner">
+                        <div class="product__img">
+                            <img src="@img/product-1.png" alt="product-img">
+                            <div class="product__rating">
+
+                            </div>
+                            <div class="product__like icon-heart"></div>
+                        </div>
+                        <div class="product__tabs tabs" data-tabs="tab">
+                            <ul class="tabs__nav">
+                                <li class="tabs__nav-item">
+                                    <button class="tabs__nav-btn tabs__nav-btn--active" type="button">Описание</button>
+                                </li>
+                                <li class="tabs__nav-item">
+                                    <button class="tabs__nav-btn" type="button">Оплата</button>
+                                </li>
+                                <li class="tabs__nav-item">
+                                    <button class="tabs__nav-btn" type="button">Доставка</button>
+                                </li>
+                                <li class="tabs__nav-item">
+                                    <button class="tabs__nav-btn" type="button">Отзывы</button>
+                                </li>
+                            </ul>
+                            <div class="tabs__content">
+                                <div class="tabs__panel">
+                                    <p>Полнорационный гранулированный стартовый комбикорм для цыплят
+                                        бройлеров от 1 до 25 или от 11 до 24 дневного возраста. Производится в виде
+                                        крупки:
+                                        диаметр – 3,2 мм, размер 2-3 мм. Бежевый цвет с приятным фруктово-зерновым
+                                        запахом.</p>
+
+                                    <p>
+                                        В рецепте комбикорма используется только высокопротеиновые ингредиенты,
+                                        обладающие
+                                        высоким уровнем усвояемости, используют мультиэнзимную группу, способствующую
+                                        лучшему усвоению белков и минеральной группы.
+                                    </p>
+
+                                    <p>
+                                        Благодаря своей усовершенствованной формуле стартовый комбикорм действует на
+                                        интенсивный рост молодняка до достижения ими продуктивного периода.
+                                    </p>
+
+                                    <p>
+                                        За период кормления на 24-25 день жизни Комбикорм Крамар ПК 5-4 обеспечивает
+                                        массу
+                                        цыпленка-бройлера до 1300-1400 г. живой массы тела.
+                                    </p>
+                                </div>
+                                <div class="tabs__panel">
+                                    <p>
+                                        Оплата производится наличными при покупке товара в торговой точке или переводом
+                                        на банковскую карту
+                                    </p>
+                                </div>
+                                <div class="tabs__panel">
+                                    <p>
+                                        Доставка производится по району при условии оплаты товара и
+                                        услуги доставки. При покупке товара от 200 000 доставка бесплатно
+                                    </p>
+                                </div>
+                                <div class="tabs__panel">
+                                    <p>Здесь будут самые крутые отзывы от довольных клиентов</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__sidebar">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        @@include('html/cards/popular.html',{})
+        @@include('html/cards/actions.html',{})
+    </main>
+    @@include('html/footer.html',{})
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>

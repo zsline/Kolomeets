@@ -6,5 +6,3 @@ flsFunctions.isWebp();
 
 const swiper = new Swiper();
 
-
-
