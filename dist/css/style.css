@@ -194,6 +194,10 @@ fieldset {
   padding: 0;
 }
 
+*:focus {
+  outline: 1px solid var(--black);
+}
+
 body {
   font-family: Comfortaa, sans-serif;
   font-weight: 400;
@@ -309,7 +313,7 @@ section {
   color: var(--broom);
 }
 
-.modal {
+.modal-cart {
   position: absolute;
   border: 2px solid rgba(255, 255, 255, 0.5);
   box-shadow: inset 500px 500px 0px rgba(0, 0, 0, 0.55);
@@ -323,12 +327,15 @@ section {
   backdrop-filter: blur(3px);
   transition: all 0.3s;
 }
-.modal__links {
+.modal-cart__links {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.modal__link {
+.modal-cart__links span {
+  font-size: 40px;
+}
+.modal-cart__link {
   min-width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -409,6 +416,86 @@ section {
 
 .modal__link span {
   font-size: 40px;
+}
+
+.modal {
+  --transition-time: 0.3s;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  cursor: pointer;
+  overflow-y: auto;
+  overflow-x: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-time);
+}
+
+.modal::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.modal__container {
+  position: relative;
+  width: 1000px;
+  margin: 50px auto;
+  display: none;
+  vertical-align: middle;
+  text-align: left;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 50px;
+  cursor: default;
+}
+
+@media (max-width: 1024px) {
+  .modal__container {
+    width: 90%;
+  }
+}
+.modal .modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  font-size: 18px;
+}
+
+.modal.is-open {
+  opacity: 1;
+  visibility: visible;
+  transition: all var(--transition-time);
+}
+
+.modal__container.modal-open {
+  display: inline-block;
+}
+
+.fade {
+  opacity: 0;
+  transition: all var(--transition-time);
+}
+
+.fade.animate-open {
+  opacity: 1;
+  transition: all var(--transition-time);
+}
+
+.disable-scroll {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  width: 100%;
 }
 
 .header {
@@ -497,6 +584,27 @@ section {
   .header__user {
     display: none;
   }
+}
+.header__cart {
+  position: relative;
+  background: transparent;
+  color: #fff;
+  font-size: 26px;
+}
+.header__cart span {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 50%;
+  background: var(--trinidad);
 }
 .header img {
   filter: brightness(3000%);
