@@ -1,4 +1,7 @@
 .cart-modal {
+    &__title{
+        margin-bottom: 15px;
+    }
     &__list{
         max-height: 500px;
         padding: 20px;

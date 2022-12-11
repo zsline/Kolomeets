@@ -254,10 +254,12 @@ section {
     border-radius: 20px;
     padding: 50px;
     cursor: default;
+
 }
 @media(max-width: 1024px) {
     .modal__container{
         width: 90%;
+        padding: calc(10px + (50 - 10) * (100vw - 320px) / (1024 - 320));
     }
 }
 .modal .modal-close{

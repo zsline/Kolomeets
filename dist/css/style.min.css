@@ -455,6 +455,7 @@ section {
 @media (max-width: 1024px) {
   .modal__container {
     width: 90%;
+    padding: calc(10px + 40 * (100vw - 320px) / 704);
   }
 }
 .modal .modal-close {
@@ -1834,6 +1835,9 @@ section {
   display: block;
 }
 
+.cart-modal__title {
+  margin-bottom: 15px;
+}
 .cart-modal__list {
   max-height: 500px;
   padding: 20px;
