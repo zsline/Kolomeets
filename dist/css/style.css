@@ -194,10 +194,6 @@ fieldset {
   padding: 0;
 }
 
-*:focus {
-  outline: 1px solid var(--black);
-}
-
 body {
   font-family: Comfortaa, sans-serif;
   font-weight: 400;
