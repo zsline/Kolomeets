@@ -646,6 +646,12 @@ section {
   font-size: 22.5px;
 }
 
+.header--fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
 .main-top {
   position: relative;
   background-position: center;
@@ -1371,6 +1377,9 @@ section {
   backdrop-filter: blur(4px);
   border-radius: 16px;
 }
+.main-production__form-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
 .main-production__form-textarea {
   padding: 15px 20px;
   font-family: "Inter";
@@ -1381,6 +1390,9 @@ section {
   letter-spacing: 0.15em;
   margin-bottom: 30px;
   color: #fff;
+}
+.main-production__form-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
 }
 @media (max-width: 1440px) {
   .main-production__form-textarea {

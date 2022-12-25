@@ -38,6 +38,8 @@ const sidebarTitle = document.querySelector('.sidebar__catalog-title');
 const filterTitle = document.querySelector('.sidebar__catalog-filter');
 const sidebarMenu = document.querySelector('.sidebar__catalog-nav');
 const sidebaFilter = document.querySelector('.sidebar__filter-wrapper');
+
+
 function sidebarActived(title, box) {
     if (title || box) {
         title.addEventListener('click', () => {
@@ -52,17 +54,30 @@ function sidebarActived(title, box) {
     titleSidebar.forEach((el) => {
         el.firstElementChild.addEventListener('click', () => {
             console.dir(el.firstElementChild.children[0]);
-            el.lastElementChild.classList.toggle('active')
-            el.firstElementChild.children[0].classList.toggle('rotate-active')
+            el.lastElementChild.classList.toggle('active');
+            el.firstElementChild.children[0].classList.toggle('rotate-active');
         })
     });
 
 
-sidebarActived(sidebarTitle, sidebarMenu)
-sidebarActived(filterTitle, sidebaFilter)
+sidebarActived(sidebarTitle, sidebarMenu);
+sidebarActived(filterTitle, sidebaFilter);
 
+// фиксированый header
 
+const header = document.querySelector('.header');
+const mainTop = document.querySelector('.main-top');
+const headerHeidht = header.offsetHeight;
+const mainTopHeidht = mainTop.offsetHeight;
 
-
-
+window.addEventListener('scroll', () => {
+    let scrollDistance = window.scrollY;
+    if(scrollDistance >= mainTopHeidht + headerHeidht) {
+        header.classList.add('header--fixed');
+        mainTop.style.marginTop = `${headerHeidht}px`;
+    } else {
+        header.classList.remove('header--fixed');
+        mainTop.style.marginTop = null;
+    }
+})
 
