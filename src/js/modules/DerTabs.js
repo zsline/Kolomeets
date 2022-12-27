@@ -124,7 +124,6 @@ export default class DerTabs {
         this.tabsPanels[index].classList.add('tabs__panel--active');
         this.tabsBtns[oldIndex].classList.remove('tabs__nav-btn--active');
         this.tabsBtns[index].classList.add('tabs__nav-btn--active');
-
         this.options.isChanget(this);
     }
 }
