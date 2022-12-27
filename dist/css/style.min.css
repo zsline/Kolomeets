@@ -648,10 +648,19 @@ section {
 
 .header--fixed {
   position: fixed;
-  top: 0;
+  top: -103px;
   left: 0;
+  animation: 0.3s linear forwards sun;
 }
 
+@keyframes sun {
+  from {
+    top: -103px;
+  }
+  to {
+    top: 0;
+  }
+}
 .main-top {
   position: relative;
   background-position: center;
@@ -1769,6 +1778,10 @@ section {
   letter-spacing: 0.15em;
   cursor: pointer;
   user-select: none;
+}
+.product__info-minus.disabled {
+  opacity: 0.7;
+  cursor: auto;
 }
 .product__info-input {
   width: 75px;

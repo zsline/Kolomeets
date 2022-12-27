@@ -137,10 +137,6 @@
     &__nav {
         display: inline-block;
 
-        &-list {
-            // display: flex;
-            // gap: 15px;
-        }
         &-item{
             margin-bottom: 20px;
         }
@@ -168,6 +164,15 @@
 
 .header--fixed{
     position: fixed;
-    top: 0;
+    top: -103px;
     left: 0;
+    animation: 0.3s linear forwards sun;
+}
+@keyframes sun{
+    from{
+        top: -103px;
+    }
+    to {
+        top: 0;
+    }
 }

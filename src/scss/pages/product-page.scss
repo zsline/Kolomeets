@@ -130,6 +130,12 @@
                 user-select: none;
             }
         }
+        &-minus{
+            &.disabled{
+                opacity: 0.7;
+                cursor: auto;
+            }
+        }
 
         &-input {
             width: 75px;
