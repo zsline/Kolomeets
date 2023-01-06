@@ -40,7 +40,7 @@ export default class DerTabs {
             this.tabsBtns = this.tabs.querySelectorAll('.tabs__nav-btn');
             this.tabsPanels = this.tabs.querySelectorAll('.tabs__panel');
         } else {
-            console.error('Селектор data-tabs не существует.');
+            // console.error('Селектор data-tabs не существует.');
             return;
         }
         this.check();
